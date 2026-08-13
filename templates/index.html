@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Daniel Costa | Gastronomia</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <strong>DANIEL COSTA</strong>
+        <span>GASTRONOMIA</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#ebooks">E-books</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+
+    <a href="/login" class="conta">Minha conta</a>
+</header>
+
+
+<main>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">
+            GASTRONOMIA • TÉCNICA • EXPERIÊNCIA
+        </span>
+
+        <h1>
+            Da cozinha profissional<br>
+            para a sua.
+        </h1>
+
+        <p>
+            Conteúdos criados por Chef Daniel Costa para quem quer
+            cozinhar melhor, dominar técnicas e transformar conhecimento
+            gastronômico em experiência — dentro de casa ou em um negócio.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#ebooks" class="btn-primary">
+                Conhecer os conteúdos
+            </a>
+
+            <a href="#sobre" class="btn-secondary">
+                Conhecer o chef
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="produto" id="ebooks">
+
+    <div class="produto-imagem">
+        <img src="{{ url_for('static', filename='capa-massas-risotos.png') }}"
+             alt="E-book Massas e Risotos">
+    </div>
+
+    <div class="produto-info">
+
+        <span class="eyebrow">E-BOOK</span>
+
+        <h2>Massas & Risotos</h2>
+
+        <h3>
+            Domine as técnicas. Transforme ingredientes em experiências.
+        </h3>
+
+        <p>
+            Um conteúdo direto e prático para quem deseja entender
+            os fundamentos da cozinha e preparar massas e risotos
+            com mais técnica e segurança.
+        </p>
+
+        <ul>
+            <li>Tipos e formatos de massas</li>
+            <li>Receitas de massas artesanais</li>
+            <li>Molhos essenciais</li>
+            <li>Equipamentos e processos</li>
+            <li>Custos, estoque e CMV</li>
+            <li>Visão de vendas e negócio</li>
+        </ul>
+
+        <div class="preco">
+            <small>ACESSO AO E-BOOK</small>
+            <strong>R$ 9,90</strong>
+        </div>
+
+        <a href="/produto/massas-risotos" class="btn-primary">
+            Quero meu e-book
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="aprendizado">
+
+    <span class="eyebrow">CONHECIMENTO NA PRÁTICA</span>
+
+    <h2>O que você vai aprender</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Massas</h3>
+            <p>Preparos, formatos e fundamentos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Técnicas</h3>
+            <p>Conhecimento aplicado à cozinha.</p>
+        </div>
+
+        <div class="card">
+            <h3>Molhos</h3>
+            <p>Bases e combinações essenciais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Equipamentos</h3>
+            <p>Processos e ferramentas adequadas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Custos & CMV</h3>
+            <p>Controle e visão profissional.</p>
+        </div>
+
+        <div class="card">
+            <h3>Empreender</h3>
+            <p>Conhecimento gastronômico como negócio.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="sobre" id="sobre">
+
+    <div class="sobre-foto">
+        <img src="{{ url_for('static', filename='chef-daniel-costa.jpeg') }}"
+             alt="Chef Daniel Costa">
+    </div>
+
+    <div class="sobre-texto">
+
+        <span class="eyebrow">SOBRE O CHEF</span>
+
+        <h2>Daniel Costa</h2>
+
+        <p>
+            Com mais de 20 anos de experiência na gastronomia,
+            Chef Daniel Costa construiu sua trajetória entre a cozinha,
+            a operação e a gestão.
+        </p>
+
+        <p>
+            Agora, transforma essa experiência em conteúdos acessíveis
+            para quem deseja evoluir na cozinha e compreender a
+            gastronomia de forma prática e profissional.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="proximos" id="cursos">
+
+    <span class="eyebrow">EM BREVE</span>
+
+    <h2>Próximos conteúdos</h2>
+
+    <p>
+        Novos e-books, cursos e conteúdos exclusivos estão sendo preparados.
+    </p>
+
+</section>
+
+
+<section class="area-aluno">
+
+    <div>
+        <span class="eyebrow">JÁ É ALUNO?</span>
+        <h2>Seus conteúdos em um só lugar.</h2>
+    </div>
+
+    <a href="/login" class="btn-secondary">
+        Acessar minha conta
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+    <strong>Daniel Costa Gastronomia</strong>
+    <p>Conhecimento, técnica e experiência.</p>
+</footer>
+
+</body>
+</html>
