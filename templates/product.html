@@ -3,56 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ product.title }} | Chef Daniel Costa</title>
-
+    <title>{{ product['title'] }} | Chef Daniel Costa</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <main class="product-page">
+<main class="product-page">
 
-        <a href="/" class="back-link">← Voltar</a>
+    <a href="/" class="back-link">← Voltar</a>
 
-        <section class="product-detail">
+    <section class="produto">
 
-            <div class="product-image">
-                <img
-                    src="{{ url_for('static', filename=product.image) }}"
-                    alt="{{ product.title }}"
-                >
+        <div class="produto-imagem">
+            <img
+                src="{{ url_for('static', filename='capa-massas-risotos.PNG') }}"
+                alt="Massas & Risotos"
+            >
+        </div>
+
+        <div class="produto-info">
+
+            <span class="eyebrow">CONTEÚDO DIGITAL</span>
+
+            <h1>{{ product['title'] }}</h1>
+
+            <p>{{ product['description'] }}</p>
+
+            <div class="preco">
+                <small>ACESSO AO E-BOOK</small>
+                <strong>{{ product['price_cents'] | money }}</strong>
             </div>
 
-            <div class="product-info">
+            <a href="/cadastro" class="btn-primary">
+                QUERO GARANTIR O MEU
+            </a>
 
-                <p class="product-label">CONTEÚDO DIGITAL</p>
+            <p>Compra segura • Acesso digital</p>
 
-                <h1>{{ product.title }}</h1>
+        </div>
 
-                <p class="product-description">
-                    {{ product.description }}
-                </p>
+    </section>
 
-                <div class="product-price">
-                    R$ {{ product.price }}
-                </div>
-
-                <a href="{{ product.checkout }}"
-                   class="buy-button"
-                   target="_blank"
-                   rel="noopener">
-                    QUERO GARANTIR O MEU
-                </a>
-
-                <p class="secure-payment">
-                    Compra segura • Acesso digital
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+</main>
 
 </body>
 </html>
