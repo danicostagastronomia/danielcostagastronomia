@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta | Daniel Costa Gastronomia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main class="auth">
+
+    <form method="POST" class="box">
+
+        <p class="eyebrow">ÁREA DO ALUNO</p>
+
+        <h1>Criar conta</h1>
+
+        <label>
+            Nome
+            <input type="text" name="name" required>
+        </label>
+
+        <label>
+            E-mail
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Senha
+            <input type="password" name="password" required>
+        </label>
+
+        <button type="submit" class="btn-primary">
+            CRIAR MINHA CONTA
+        </button>
+
+        <p style="margin-top:20px;">
+            Já possui uma conta?
+            <a href="/login">Entrar</a>
+        </p>
+
+    </form>
+
+</main>
+
+</body>
+</html>
