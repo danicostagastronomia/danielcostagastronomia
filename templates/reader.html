@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product['title'] }} | Daniel Costa Gastronomia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <strong>DANIEL COSTA</strong>
+        <span>GASTRONOMIA</span>
+    </div>
+
+    <a href="/biblioteca">← Minha Biblioteca</a>
+</header>
+
+<main>
+
+    <section class="aprendizado">
+
+        <span class="eyebrow">ÁREA DO ALUNO</span>
+
+        <h1>{{ product['title'] }}</h1>
+
+        <p>{{ product['description'] }}</p>
+
+        <div class="card">
+
+            <h2>Seu e-book</h2>
+
+            <p>
+                O conteúdo digital estará disponível para leitura aqui.
+            </p>
+
+            <p>
+                Em breve conectaremos o arquivo completo do e-book a esta área.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
