@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.title }} | Chef Daniel Costa</title>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="product-page">
+
+        <a href="/" class="back-link">← Voltar</a>
+
+        <section class="product-detail">
+
+            <div class="product-image">
+                <img
+                    src="{{ url_for('static', filename=product.image) }}"
+                    alt="{{ product.title }}"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-label">CONTEÚDO DIGITAL</p>
+
+                <h1>{{ product.title }}</h1>
+
+                <p class="product-description">
+                    {{ product.description }}
+                </p>
+
+                <div class="product-price">
+                    R$ {{ product.price }}
+                </div>
+
+                <a href="{{ product.checkout }}"
+                   class="buy-button"
+                   target="_blank"
+                   rel="noopener">
+                    QUERO GARANTIR O MEU
+                </a>
+
+                <p class="secure-payment">
+                    Compra segura • Acesso digital
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
