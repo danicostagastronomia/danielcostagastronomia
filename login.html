@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Daniel Costa Gastronomia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main class="auth">
+
+    <form method="POST" class="box">
+
+        <p class="eyebrow">ÁREA DO ALUNO</p>
+
+        <h1>Entrar</h1>
+
+        <label>
+            E-mail
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Senha
+            <input type="password" name="password" required>
+        </label>
+
+        <button type="submit" class="btn-primary">
+            ENTRAR
+        </button>
+
+        <p style="margin-top:20px;">
+            Ainda não possui conta?
+            <a href="/cadastro">Criar conta</a>
+        </p>
+
+    </form>
+
+</main>
+
+</body>
+</html>
