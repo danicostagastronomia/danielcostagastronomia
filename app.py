@@ -32,7 +32,7 @@ def home():
     con = get_db()
     products = con.execute("SELECT * FROM products WHERE active=1 ORDER BY id DESC").fetchall()
     con.close()
-    return render_template("home.html", products=products, user=current_user())
+    return render_template("index.html", products=products, user=current_user())
 
 @app.route("/produto/<slug>")
 def product(slug):
