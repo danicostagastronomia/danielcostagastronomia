@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Biblioteca | Daniel Costa Gastronomia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <strong>DANIEL COSTA</strong>
+        <span>GASTRONOMIA</span>
+    </div>
+
+    <a href="/logout">Sair</a>
+</header>
+
+<main>
+
+    <section class="aprendizado">
+
+        <span class="eyebrow">ÁREA DO ALUNO</span>
+
+        <h1>Minha Biblioteca</h1>
+
+        <p>Olá, {{ user['name'] }}! Seus conteúdos estão aqui.</p>
+
+        <div class="cards">
+
+            {% for product in products %}
+
+            <div class="card">
+
+                <h3>{{ product['title'] }}</h3>
+
+                <p>{{ product['description'] }}</p>
+
+                <a href="/ler/{{ product['slug'] }}" class="btn-primary">
+                    ACESSAR E-BOOK
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
